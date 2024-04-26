@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {appInsights} from './telemetry';
+import { useAppInsightsContext } from '@microsoft/applicationinsights-react-js';
 
 function App() {
+  // const appInsights = useAppInsightsContext();
+  
+  useEffect(() => {
+    if (appInsights) {
+      console.log("AppLoaded");
+      appInsights.trackEvent({ name: "AppLoaded" });
+      alert("AppLoaded");
+    }
+  }, [appInsights]);
+
   return (
     <div className="App">
       <header className="App-header">

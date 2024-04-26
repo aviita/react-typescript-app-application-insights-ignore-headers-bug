@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a repro for [github issue 2336 in *microsoft/ApplicationInsights-JS* repo](https://github.com/microsoft/ApplicationInsights-JS/issues/2336).
+
+Just run `npm run build` to get the build error on `ignoreHeaders`.
+
 
 ## Available Scripts
 

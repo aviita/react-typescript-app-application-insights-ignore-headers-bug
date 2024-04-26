@@ -15,6 +15,8 @@ const appInsights = new ApplicationInsights({
     disableFetchTracking: false,
     //enableRequestHeaderTracking: true, // Enable to get request headers in dependency logs
     enableResponseHeaderTracking: true, // Enable to get response headers in dependency logs
+    // BUG: FOLLOWING LINE GIVES ERROR ON BUILD
+    // Object literal may only specify known properties, and 'ignoreHeaders' does not exist in type 'IConfiguration & IConfig'.ts(2353)
     ignoreHeaders: [
       "Authorization",
       "X-API-Key",
